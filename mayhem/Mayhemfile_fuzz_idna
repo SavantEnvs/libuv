@@ -1,0 +1,9 @@
+project: savantenvs/libuv
+target: fuzz_idna
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_idna/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_idna
+    libfuzzer: true
+    timeout: 5
